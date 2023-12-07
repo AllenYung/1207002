@@ -68,7 +68,7 @@ export default {
             position: absolute;
             top: 5px;
             left: 5px;
-            background-image: url(public/my.png);
+            background-image: url(my.png);
             width: 32px;
             height: 32px;
             z-index: 5;
@@ -88,7 +88,7 @@ export default {
             right: 5px;
             border-radius: 8px;
             border: 2px solid white;
-            background-image: url(public/X.jpg);
+            background-image: url(X.jpg);
             width: 32px;
             height: 32px;
         }

@@ -4,7 +4,7 @@ import counter from '../stores/counter'
 export default {
     data() {
         return {
-            audio: new Audio('public/ahoy.mp3'),
+            audio: new Audio('ahoy.mp3'),
             isPlaying: false,
             marA: false,
             marB: false,
@@ -116,7 +116,7 @@ export default {
             position: absolute;
             top: 5px;
             left: 5px;
-            background-image: url(public/my.png);
+            background-image: url(my.png);
             width: 32px;
             height: 32px;
             z-index: 5;
@@ -136,7 +136,7 @@ export default {
             right: 5px;
             border-radius: 8px;
             border: 2px solid white;
-            background-image: url(public/X.jpg);
+            background-image: url( X.jpg);
             width: 32px;
             height: 32px;
             z-index: 5;
@@ -192,7 +192,7 @@ export default {
             border: 1px solid red;
             width: 30%;
             height: 70%;
-            background-image: url(public/marriine.gif);
+            background-image: url(marriine.gif);
             background-repeat: no-repeat;
             background-position: -45px 10px;
             background-size: cover;
@@ -219,7 +219,7 @@ export default {
 
         .b4 {
             border: 1px solid rgb(26, 0, 0);
-            background-image: url(public/marrinee.gif);
+            background-image: url(marrinee.gif);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: -40px 0px;
@@ -240,7 +240,7 @@ export default {
             .b444 {
                 width: 5%;
                 height: 100%;
-                background-image: url(public/1220.png);
+                background-image: url(1220.png);
                 background-position: -20px ;
                 background-size: cover;
                 font-size: 1px;
@@ -249,7 +249,7 @@ export default {
             .b4cc{
                 transition: 2s;
                 width: 100%;
-                background-image: url(public/1220.png);
+                background-image: url(1220.png);
                 background-position: -20px ;
                 background-size: cover;
                 display: flex;
@@ -273,25 +273,24 @@ export default {
             left: 30%;
             overflow: hidden;
             // background-color: #98004c67;
-            background-image: url(public/heart.gif);
+            background-image: url(heart.gif);
             background-position: -10px -5px;
             background-repeat: no-repeat;
 
             .ahoyButton {
                 width: 25%;
                 height: 45%;
-                background-image: url(public/amammamamam.gif);
+                background-image: url(amammamamam.gif);
                 background-size: cover;
                 background-repeat: no-repeat;
                 border-radius: 20%;
-                z-index: 20;
                 position: absolute;
                 top: 28%;
                 left: 38%;
             }
 
             .mar1 {
-                background-image: url(public/marine3.gif);
+                background-image: url(marine3.gif);
                 width: 25%;
                 height: 50%;
                 background-size: contain;
@@ -302,11 +301,11 @@ export default {
             }
 
             .mar11 {
-                background-image: url(public/marine1.gif);
+                background-image: url(marine1.gif);
             }
 
             .mar2 {
-                background-image: url(public/marine2.gif);
+                background-image: url(marine2.gif);
                 width: 25%;
                 height: 50%;
                 background-size: contain;
@@ -317,7 +316,7 @@ export default {
             }
 
             .mar22 {
-                background-image: url(public/marine4.gif);
+                background-image: url(marine4.gif);
             }
         }
     }

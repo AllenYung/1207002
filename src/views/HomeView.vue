@@ -72,7 +72,7 @@ export default {
             </div>
           </div>
         </a>
-        <img src="public/blakcc.png" alt="" class="bblack">
+        <img src="/blakcc.png" alt="" class="bblack">
         <div class="windows">
           <me v-show="pp1" />
           <javaScript v-show="pp2" />
@@ -84,11 +84,11 @@ export default {
     <div class="bottom">
       <div class="startB"> 開始</div>
       <div class="bottomRight">
-        <img src="public/bluetooth.ico" alt="">
-        <img src="public/safe.ico" alt="">
-        <img src="public/louder.ico" alt="">
-        <img src="public/ber.ico" alt="">
-        <img src="public/in.ico" alt="">
+        <img src="/bluetooth.ico" alt="">
+        <img src="/safe.ico" alt="">
+        <img src="/louder.ico" alt="">
+        <img src="/ber.ico" alt="">
+        <img src="/in.ico" alt="">
         <div class="time">
           <span>{{ currentTime }}</span>
         </div>
@@ -105,7 +105,7 @@ export default {
   height: 100vh;
   background-color: white;
   background-color: #4060F8;
-  background-image: url(public/1204.jpg);
+  background-image: url(/1204.jpg);
   background-size: cover;
   display: flex;
   z-index: 0;
@@ -168,7 +168,7 @@ export default {
       }
 
       .p1 {
-        background-image: url(public/my.png);
+        background-image: url(/my.png);
         // background-position: center;
         // background-size: contain;
         // background-repeat: no-repeat;
@@ -176,7 +176,7 @@ export default {
       }
 
       .p2 {
-        background-image: url(public/oo.png);
+        background-image: url(/oo.png);
         // background-size: contain;
         // background-repeat: no-repeat;
 
@@ -184,7 +184,7 @@ export default {
       }
 
       .p3 {
-        background-image: url(public/shell2.ico);
+        background-image: url(/shell2.ico);
         // background-size: contain;
         // background-repeat: no-repeat;
         // background-position: center;
@@ -192,7 +192,7 @@ export default {
       }
 
       .p4 {
-        background-image: url(public/shell.ico);
+        background-image: url(/shell.ico);
         // background-size: contain;
         // background-repeat: no-repeat;
         // background-position: center;
@@ -299,7 +299,7 @@ export default {
       height: 80%;
       border-radius: 10px;
       background-color: #2F9847;
-      background-image: url(public/windows.ico);
+      background-image: url(/windows.ico);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 10px;
