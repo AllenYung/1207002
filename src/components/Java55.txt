@@ -1,0 +1,471 @@
+JavaC 
+compiler編譯 
+
+	Java JDK
+Java
+Deve開發
+Kit工具
+
+	    JRE
+Java
+Runtime執行
+Environment環境
+===============================================================================
+public class XxxxxDdddd {}
+
+public 給予權限 將權限設成公開
+private 給予權限 將權限設為私人 只有此專案可以使用這個方法
+class 類別名稱
+
+public void ssssssDddddd() {}
+
+void 回傳值形態 指不回傳任何東西
+
+
+如果我在public void () {}的小括號裡打入變數 意思是我呼叫上面主方法裡的參數
+ex: public void (){
+ 	int x=8;
+	int y=9;
+}
+//而再下一行的結構我可以打成
+    public void (int x,int y) {
+              //則此段內容的X 和Y會被帶入上面主詞條的參數 且記得帶入的時候要在前面給予資料形態
+}
+
+如果我要回傳東西 只要將void(不回傳) 改成我要回傳的資料形態，並在結尾加上 return 
+
+ex:若我要在此方法回傳字串(裡面用str1) 用String
+
+public String switchDay () {	
+	return str1 ;
+}
+
+而要接回來的話只要做宣告 ex: String str1=switchDay(x,y);
+===============================================================================
+原始資料型態(Primitive Data Types) 不包含大寫的資料形態 =後面直接給變數.數值就好，不用+new(string　也不需要＋new)
+▪ byte, short, int, long, float, double, Boolean, char 等8種
+▪ 特色是當我們定義變數同時設定變數值時,變數值內容是直接放在變數
+內
+如果對string +new 會生成一個新的記憶體空間給他用 變為不同的string 而字串比較的時候是比較記憶體的空間
+ex:
+String str = new String("abc");
+		String str1 = new String("abc");
+		System.out.println(str==str1);				//因為不同記憶體 答案會是false
+		System.out.println(str.equals(str1));			//用equals比較時 只會比較裡面的字串(大
+
+		System.out.println(str.equalsIgnoreCase(str1));		//小寫不一樣) 跟記憶體無關
+		System.out.println(str.equalsIgnoreCase(str1));		//用equalsIgnoreCase比較時可以忽略 大小寫(case)
+		System.out.println("====================");
+		String str3 = ("abc");
+		String str4 = ("abc");
+		System.out.println(str3==str4);				//結果為true
+===============================================================================
+			  大駝峰 FirstTestCode 常用在檔案/類別(class)的名稱
+駝峰式命名方式<
+			  小駝峰 firstTestCode 常用在變數的名稱,方法名稱
+
+當有兩個英文字母時 例:first test code 則接在後面單詞的第一個英文字母要大寫
+
+ex:firstTestCode
+===============================================================================
+介面(Interface)名稱          from:後端03語言基礎p.13
+首字大寫,大駝峰式命名法
+名稱應為名詞或形容詞
+▪ 類別(Class)名稱
+首字大寫,大駝峰式命名法
+名稱應為名詞
+▪ 方法(Method)名稱
+首字小寫,小駝峰式命名法
+名稱應為動詞或動詞開頭
+
+變數(Variable)名稱
+首字小寫,小駝峰式命名法
+名稱應為名詞
+▪ 常數(Constant Variable)名稱
+全部大寫,用底線(_)分隔不同字
+名稱應為名詞
+▪ Package 名稱
+全小寫,也是 domain 名稱
+===============================================================================
+一個專案只有一個main(入口點)
+
+大括號裡面的敘述結尾要 + ;
+
+某一行的//右邊文字皆為註解 快捷鍵ctrl+/ CTRL+z回復
+可以用來做註解 或是跳過該段讀取程式碼
+
+用/* ... */為多行註解
+/*
+
+
+*/
+===============================================================================
+ctrl+shift+f為快速排版 (使用快速排版之後若後面有//則為斷行
+
+跑測試的話要加@ @在Java的意思為註釋
+例如@Test 為底下的程式碼做測試 
+
+Object物件
+
+contextLoads為方法命名
+
+import 帶入
+
+alt + / 為快速尋找代碼 例如輸入sysout＋
+
+除了數字之外的都為字串（例如中文．英文）　字串要用＂＂括起來才能讀取
+
+Java需要在變數前面加資料型態 ex:整數a=6 因為=右邊為數字6為整數值 所以用int
+int為一種初始化變數的code 在括號裡只能對一個變數用一個int 意思為將該變數設為某個值
+
+ex2:b="6" =後面的6因為被""刮起來了所以為字串 用String
+
+程式碼當中跟數學不同，有=的話要以右邊的結果 設定為左邊的變數
+ex:a=a+1 在程式碼解讀中，他的意思為將a+1 設定為a
+===============================================================================
+Println()之意為print與line,代表印出文字 並且換行。
+▪ println( ): 輸出後會換行 ln
+▪ printf( ): 輸出後不會換行 format
+
+資料基本型態 後端03 P.16
+數值(Numeric)
+整數(Integer)
+浮點數(floating point)
+▪ 字元(char,characters)使用''裡面只能使用一個字，字串string使用" " 
+▪ 布林值(boolean) 意思是true or false
+
+int 	初始值為0		integer 
+float	初始值為0.0 		folating point
+char 	的初始值''		characters
+string 	的初始值為""
+------------boolean布林值初始值為false---------------
+大寫的資料型態預設值會是 Null
+
+字元可以用數字取代 會變成Unicode (https://zh.wikipedia.org/wiki/Unicode%E5%AD%97%E7%AC%A6%E5%88%97%E8%A1%A8
+
+關於boolean布林值 在java裡如果要比較兩個算式 則要在右面比較的地方多一個= 
+ex: boolean y= 5 == 6 結果會是false 
+===============================================================================
+一元運算式
+a++ //++為遞增
+a-- //--為遞減
+x= a++ 會先把a給x 再將a+1
+y= ++b 會先將b+1 再將結果給y
+ex: int c = 99
+		println ++c= 100
+		        c= 100
+		        --c= 99
+    int b =99
+		println b--=99
+				 b=98
+				 b++=98
+				 b=99
+三元運算式 c= a > b? (true的結果):(false的結果)
+//		 若a>b 則c為true的結果
+//		 若a<b 則c為false的結果
+
+%為求餘數
+ex: 5%3=2
+	7%4=3
+
+Java pdf 04程式基本運算P.12 
+a+=b	a=a+b
+a-=b	a=a-b
+a*=b	a=a*b
+a/=b	a=a/b
+a%=b	a=a%b
+
+<= 小於等於
+>= 大於等於
+== 等於
+!= 不等於
+
+運算
+!為反向運算  !只能放在前面 !有兩種用法 第一種是上面的改變運算方式
+第二種為改變結果 為下列所述
+ex:  boolean a = 100 > 102;             顯示結果:
+		System.out.println(a);   false
+		System.out.println(!a);  true
+若   boolean a = !(100 > 102);
+		System.out.println(a);   ture   
+		System.out.println(!a);  false
+
+&& 或是 &, AND 運算	(必須要所有條件都是true 他才會是true
+	 AND=且
+|| 或是 |, OR 運算	(只要一個答案是true 他就是true
+	  OR=或
+ex: a= true  b= true	a&&b =true
+    a= true  b= false 	     =false
+       false    true         =false
+       false    false	     =false
+
+ex2:a= true  b= true    a||b =true
+       true     false        =true
+       false    true	     =true
+       false    false        =true
+
+一個符號以及兩個符號的差異 &&(||) 與 &(|) 的差異
+兩個符號的 && (||) 左邊運算元可以決定結果，程式會忽略右邊的運算元操作
+而一個符號的話 & (|)他還是會跑右邊的結果
+
+Long 後面的數字如果有跳紅色的錯誤報告 在數字的最後面 + L
+ex: Long x = 842315897 L
+
+整數轉字串			字串轉整數
+Integer.toString()		Integer.parseInt() 
+String.valueOf()		Integer.valueOf()
+===============================================================================
+要加一個新的資料形態要用new	ex:Scanner scan = new Scanner(System.in)
+
+String字串類的 以及小寫的數字類基本運算值(int  boolean)   可以不用+ new
+
+大寫的基本運算值 會變成class(類別) 要+new 只要是除了基本運算以外的class預設值都會是Null 
+
+Scanner 是一個可以讀取輸入的class 用法為 Scanner xxx= new Scanner(System.in)
+
+int x = scan.next()
+輸入文字 但是會讀到空白鍵
+
+int x = scan.nexLine();
+輸入文字 會讀取一整行
+
+程式碼的索引位置都會從0開始
+
+import 是可以用別人寫好的東西
+
+int a = 6;
+===============================================================================
+if 用法
+		int b = 12;
+		if( a > b ) {		//如果A>B =true 的話 執行if
+			System.out.println("++++++");
+		}else {			//如果A>B = false 的話 執行else
+			System.out.println("------");
+
+switch 敘述
+▪ 使用時機: 敘述語句太多 if ... else 時，在 switch 的變數或是運算式的結果其資料型態必須是 char、byte、short、int、String 等類型
+可為整數值 不接收boolean值
+case:
+▪ 其值的類型是根據 switch 的變數或運算式的結果,進而執行對應之區塊
+▪ default:
+▪ 可有可無,若沒有則相當於 switch 的變數或運算結果找不到對應的 case 區塊時,
+不執行任何工作
+
+例:
+switch() {
+case valueA:
+
+break;				//break用來跳出switch的條件式，如果沒有跳出程式會繼續往下跑
+case valueB
+
+break;   
+}
+
+system.out,printf ("今天是星期%d，%d後是星期二\n",weekday ,days)
+		//	%d :變數的資料型態為數字     \n為斷句 如果不用\n的話prinf的句子不會斷句
+		//	%s :變數資料型態為字串的話用%s
+===============================================================================
+
+相同class 裡面的方法可以直接使用不用宣告	而不同class的方法要用 new將它宣告出來
+
+===============================================================================
+迴圈
+for 迴圈 for (1;2;3){	}
+	   ()為執行內容
+1.為初始運算式
+	迴圈最先執行的地方，只會執行一次，主要設定判斷變數的初始值
+2.條件判斷式
+	經過初始運算式後每次迴圈的起點,此條件判斷運算式會回傳布林值(true/false)
+3.迭代運算式
+	更新條件判斷運算式要用的變數值,藉以判斷迴圈是否繼續
+
+break 跳出最近的迴圈 判定式判定到了之後 會整個中斷
+continue 跳出當次迴圈 判定式會跳過判定到的當個程序 其他會繼續
+
+for (int i = a; i <= b; i++) {			//for的迴圈裡面:int i = a 只會跑一次
+	System.out.println("i1=" + i);		//i <= b 為判斷式，還未完成前會繼續跑迴圈
+		if (i%2==0) {			//i++ 為迭代 跑完整個程序(跑到sum += i)之後，
+		break;				//若還未完成判斷式的條件才會進行i++的動作
+ }
+		System.out.println("i2=" + i);
+		sum += i;
+}
+無限迴圈
+while (true) { }
+for( ; ; ){ }
+===============================================================================
+do ... while 迴圈
+▪ 與 while 迴圈最大的差異
+▪ 先執行迴圈內容(程式敘述區塊),再執行條件判斷式
+▪ 條件判斷式 = true 則迴圈繼續執行
+▪ 條件判斷式 = false 則迴圈中斷
+ex: 
+int sum = 0;
+int i = 1;
+ do{
+        sum +=i ;
+	System.out.printf("Loop = %2d ,總和=%2d\n",i,sum);
+	i++;
+ }while( i <= 10 );
+===============================================================================
+ 可以在迴圈前面加一個標籤( xxx : )讓底下的break可以直接對有標籤的迴圈作動
+ex:
+abc : for (int i = 1 ; i <= 9 ;i++){		//則當j跑到5時 會直接break外面被標籤成
+        for (int j = 1 ; j <= 9 ;j++){		//abc :for (int i = 1 ; i <= 9 ;i++)
+          if(j==5){				//結果會變成1x1~ 1x4
+		break abc;
+	  }
+      }	
+}
+===============================================================================
+Math.random()*(區間上限值 - 區間下限值 +1 ) + 區間下限值;
+ex: 如果我要的是6面骰的骰子點數		//random有可能產生 1> random >0 的數值
+Math.random()*( 6 - 1 + 1 ) +1 ;	//所以最後面要+1
+int bom = random.nextInt(99)+1;		//random.nextInt(x) 會隨機從0.1.2....x選一個整數
+					//+1的用意是因為有可能會選到0
+===============================================================================
+Java的陣列(Array&List)只能放相同資料形態 在<>來表示
+語法宣告ex:
+int [] a =1 ;
+int a [] =1 ;			//都可以
+
+double [] degree = new double[n]		//new後面的[n] n是一個數值 指宣告陣列的長度為n
+ex:double [] degree= new double[7] 		//宣告陣列長度為7
+	degree[0] = 21 ;			//所以會從0開始
+	degree[1] = 22 ;
+	degree[2] = 25 ;
+	degree[3] = 23 ;
+	degree[4] = 27 ;
+	degree[5] = 28 ;
+	degree[6] = 22 ;
+
+ex:2
+double [] de ={1,2,3,4,5}			//在宣告的同時塞數值進去
+
+
+xxx.length() 表示該字串的長度
+如果要知道宣告的參數長度多少的時候用System.out.println(intArray.length);
+如果要取出迴圈裡的參數 可以用for迴圈
+===============================================================================
+List<> 的小括號裡不能放小寫的八個基本資料型態 
+但是可以放大寫的 其中int 的大寫資料型態為Integer
+List<Integer> intList = new ArrayList<>();
+	
+1026 List01
+===============================================================================
+contains
+會判斷()裡是否有該列表的 元素 如果有會回傳true 若清單裡沒有該元素 則回傳false
+ex
+List <Integer> = new ArrayList <> ( Arrays.asList ( 1 , 5 , 7 ));
+System.out.println(intList.contains(1));					//
+System.out.println(intList.contains(3));					//
+===============================================================================
+二維陣列空間
+   列 欄	 //第0 1 2 (列
+int[] [] x ={1,2,3,	//0 第0欄
+	     4,5,6}	//1 第1欄
+x [][]=
+===============================================================================
+Database 資料庫 簡稱DB
+ex:
+public class Dog {
+
+	private String name;				//權限private宣告在資料底下
+
+	private String color;
+
+	private String age;
+===============================================================================
+//	建構方法(Constoructor):方法名稱與類別名稱相同
+	預設建構方法:不帶任何參數
+	一般建構方法:方法需要帶參數 ( 如果今天要用到一般建構方法，要建立一個預設的建構方法
+	使沒有用到
+ex:
+	public TaipeiBank() {			//與class名稱相同
+		super();
+	}
+	public String getBranch() {
+		return branch;
+
+一般建構方法的時候一定要有預設的建構方法 (先建立Super 詳情請看1030截圖
+且建構相同的方法名稱時，參數要設定成不同的資料結構不然會跑出蚯蚓
+
+static	09 24
+ https://drive.google.com/drive/folders/1bxUYxceWvSnUBBqe0QUtYEye25lFrMtu
+
+static 關鍵字
+▪ static 有全局與靜態的意義
+▪ 可以用在修飾成員變數、成員方法或是在程式中有一個獨立的 static 程
+式碼區塊
+▪ 用 public 修飾 static 的成員變數和成員方法時,本質上就會變成全局
+變數和全局方法
+▪ 類別的靜態(static)成員與非靜態成員最大的差異是靜態成員可以直接存
+取,非靜態成員則必須先用 new 來建立一個實體(instance)才可以使用,
+這邊的實體指的是物件
+
+static 成員變數
+▪ 當類別的成員變數有用 static 修飾時
+▪ 永遠只佔一組記憶體空間(很重要)
+▪ 表示此類別內的物件可以共享此 static 成員變數(成員變數屬於類別),所以又稱為
+全局變數
+
+IsBlank裡 只要字串裡有空白 或是全空白 就會回傳true
+Empty裡 只要字串類有長度 會回傳false 
+StringUtils.hasLength()
+▪ 字串有長度回傳 true;否則回傳 false
+▪ 可同時判斷字串是否為 null 以及字串是否有長度
+▪ 含有空白符號的字串會回傳 true,因為空白符號算一個字元長度
+StringUtils.hasText 判斷null.空字串.全空白 如果是的話會回傳false(字串內有內容不包含空白的話
+回傳true
+		A B C D B C A D 
+ index:		0 1 2 3 4 5 6 7	 字串的順序不變
+indexOF:      左--------------->右
+lastIndaxOf:  右<---------------左
+
+//字串:0.1.2.3..... str.indexOf("B", 1)indexOf會從左到右 找到B 包含1
+		System.out.println(str.indexOf("B", 1));
+
+//str.indexOf("B", 5) 第五格為C 因此找不到 會回-1
+		System.out.println(str.indexOf("B", 5));
+===============================================================================
+.replace取代全部相符的字串(舊的,新的)
+.replaceAll取代全部相符的字串，主要是用在正規表達式
+.replaceFirst 取代第一個文字
+trim: 刪除字串前後的空白 中間的則不變
+
+substring提取字串
+String str = "ABCDEF";
+	System.out.println(str);
+		//從第三個字串開始
+	System.out.println(str.substring(3));
+		//從第一個字串開始 到第四個字串
+	System.out.println(str.substring(1, 4));
+}
+
+Map 映對
+數字字串轉數字 Integer.parseInt()
+		     .valueOf()
+
+ split分割     10/30
+String[] strArray = str.split(", "); 	// 切出來是一個Array
+===============================================================================
+reverse字串的反轉 只能在stringBuffer裡面使用
+		sb = sb.reverse();
+
+===============================================================================
+StringBuilder 類別
+▪ StringBuffer 與 StringBuilder 的差別
+▪ 兩者提供的方法一樣
+▪ 單一執行緒環境,StringBuilder 執行速度較快,無執行緒安全(thread-safe)
+▪ 多執行緒環境,可使用 StringBuffer 類別自動處理同步的問題,有執行緒安全
+▪ 執行緒部分在後續章節會介紹
+===============================================================================
+
+\=跳脫符號  \\的話會印出\
+
+使用大括號{ }處理重複出現字串
+▪ 原先手機號碼格式 xxxx-xxx-xxx 用正規表達方式處理之格式如下
+	String pattern = "\\d\\d\\d\\d-\\d\\d\\d-\\d\\d\\d";
+▪ 使用大括號 {} 處理重複出現部分
+	String pattern = "\\d{4}-\\d{3}-\\{3}";
+▪ {} 裡面的數字為重複次數方式表達

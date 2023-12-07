@@ -1,0 +1,301 @@
+const 翻譯為「常量」，用來表示一個固定不變的值。
+let 翻譯為「變數」，用來表示一個可變的值。
+
+Number 整數
+String 字串
+Boolean 布林值(僅包含 “true” & “false“)
+Array 陣列
+Object 物件
+
+Document Object mod 文件物件模型 DOM
+-----------------------------------------------------------------------------------------
+Java script 為什麼要放在html最後面:因為要讓網頁跑資料的時候先渲染上面的圖塊，script類型的運算
+則放在最後面載入 就可以讓瀏覽器減少讀取的時間
+-----------------------------------------------------------------------------------------
+// 找到 DOM 中 具備 id 為 'hello' 的元素。
+
+document.getElementById("hello");
+
+// 找到 DOM 中 具備 class 為 'hello' 的元素。 要+[0]是因為class裡面的elements是複數 是陣列
+而[0]是只抓取第一個被該calss 抓到的標籤
+
+document.getElementsByClassName("hello")[0];
+
+// 針對給定的 Selector 條件，回傳第一個
+
+document.querySelector(".hello");
+
+// (接上行) 或 所有符合條件的元素。
+
+document.querySelectorAll(".hello");
+-----------------------------------------------------------------------------------------
+console.log();  		//console.log(object)用來將對象的內容顯示在控制台上。
+
+console.dir(object); 		//顯示對象的屬性和方法，以樹狀結構的形式顯示在控制台上。
+
+console.table(data);		//將對象或數組的數據以表格的形式顯示在控制台上。
+
+console.info(message);		//用來顯示一般的信息消息。
+
+console.log(typeof(y))		//查詢y變數的資料形態
+-----------------------------------------------------------------------------------------
+// 單純輸入文字
+.innerText = "<a href='https://www.youtube.com/'>cool</a>"
+螢幕會顯示"<a href='https://www.youtube.com/'>cool</a>"
+
+// 可以插入HTML的標籤資訊
+.innerHTML = "<a href='https://www.youtube.com/'>cool</a>"
+螢幕會顯示 cool然後會超連結至youtube
+-----------------------------------------------------------------------------------------
+//slice: 英譯:切		捉到slice()裡面的數字4 所以從原字串的第4個順位開始 產生新的字串
+
+//indexOf 英譯:索引	找到字串裡輸入數值的定位
+-----------------------------------------------------------------------------------------
+!!!				!!!
+let today = "Today is a good Day!";
+!!!				!!!
+
+//字串長度
+console.log(str.length)
+
+//擷取字串長度第4個順位 順位為0.1.2.3.4.......
+console.log(str[4])				結果會出現y
+
+//捉到slice()裡面的數字4 所以從原字串的第4個順位開始 產生新的字串
+console.log(str.slice(4))			結果會出現y is a good Day!
+
+//從第4順位到第16順位  並產生新的字串
+console.log(str.slice(4,16))			結果會出現y is a good 
+
+//找到字串裡good的順位
+console.log(str.indexOf("good"))		結果會出現11
+
+//將字串內容全部變大寫		toUpperCase 大寫字母
+console.log(today.toUpperCase());
+
+//將字串內容全部變小寫		toLowerCase 小寫字母
+console.log(today.toLowerCase());
+
+以下三個方法回傳值都為boolean
+
+					英譯:
+//判斷變數字串的開頭字串是否符合條件字串      		結果為true
+
+console.log(today.startsWith("To"))	開始於
+//判斷變數字串的結尾字串是否符合條件字串      		結果為true
+
+console.log(today.endsWith("Day!"))	結尾於
+
+//判斷變數字串是否包含條件字串		包括		結果為true
+console.log(today.includes("day"))
+
+-----------------------------------------------------------------------------------------
+
+//將字串切成陣列
+//變數字串.split(切成陣列的條件) 英譯:分離 分開   把輸入的字串從預設字串裡分離出來 並重新組成新字串
+
+console.log("split 裡面放空字串")
+console.log(today.split(""))
+
+	結果為	(20) ['T', 'o', 'd', 'a', 'y', ' ', 'i', 's', ' ', 'a', ' ', 'g', 'o', 'o', 'd', ' ', 'D', 'a', 'y', '!']
+
+console.log("splic 裡面放空白")
+console.log(today.split(" "))
+
+	結果為	(5) ['Today', 'is', 'a', 'good', 'Day!']
+
+console.log("split 裡面放a")
+console.log(today.split("a"))
+
+	結果為(4) ['Tod', 'y is ', ' good D', 'y!']
+-----------------------------------------------------------------------------------------
+function 函數
+
+let dog = {
+    name: "可樂",
+    type: "臘腸",
+    age: 2,
+    getName: function () {	//可以省略成  getName(){}
+				//此處的this這個指令 會導入輸入的物件的名字dog 如果沒有
+        return this.name;	//回傳名字當前的數值		
+    }
+}
+
+dog.getName();
+若在大括號外面設置 則為全域皆可使用的方法 只是會因為程式順序關係影響
+
+()=>{} 如果不再其他的物件裡面 會指向全域
+-----------------------------------------------------------------------------------------
+事件監聽
+
+click 		滑鼠點擊物件時
+dbclick 		滑鼠連點兩下
+mouseover 	滑鼠移動到元素及其子元素之一
+resize 		當視窗邊框大小被改變時
+keydown		按下鍵盤按鍵時	
+keypress	按下並放開鍵盤按鍵後,當按下鍵盤不放時，則會不斷地連續觸發該事件。	
+keyup		放開鍵盤的那個剎那，觸發該事件
+change		物件內容改變時 event bubble
+
+element.addEventListener(event, function, useCapture);
+element: 要添加事件監聽器的 DOM 元素。
+event: 字符串，表示監聽事件的類型，例如 "click"、"mouseover" 等。
+function: 處理事件的函數，也稱為事件處理程序或回調函數。
+useCapture（可選）: 一個布爾值，表示事件是否在捕獲階段處理。預設為 false，即在冒泡階段處理。
+
+let button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+    console.log("Button clicked!");
+});
+這個例子中，當 ID 為 "myButton" 的按鈕被點擊時，addEventListener 會觸發一個匿名函數，該函數會在控制台中輸出 "Button clicked!"。
+-----------------------------------------------------------------------------------------
+ //JS的預設值是undefine
+
+  ( x ) == 是給一個空間 放參數 x (參與這方法的變數) 
+  之後只要在()裡面輸入數值就會自動替換成 x 
+    setAge(x) {					setAge(50);
+        this.age = x;			==>	co
+        return this.age, 			
+    }						
+
+//return的意思是回傳值到該列表 若不給予數值會跳出預設值undefined
+getName: function () {
+        //this關鍵字指向dog這個物件
+        return this.name;
+    },
+
+
+重新整理網頁
+	<Input Type="Button" Value="重新整理" onClick="window.location.reload();">
+-----------------------------------------------------------------------------------------
+Math 運算
+
+Math.floor()函數會回傳小於等於所給數字的最大整數。
+
+let a = 5.4;
+
+//無條件捨去 小數點後
+console.log(Math.floor(a))
+
+//無條件進位
+console.log(Math.ceil(a))
+
+// 四捨五入
+console.log(Math.round(a))
+
+//產生0~1之間的亂數
+console.log(Math.random())
+
+let b =2 ;
+
+//計算次方數答案
+//10為次方數
+console.log(Math.pow(b, 10))
+
+let c = -8;
+
+//絕對值 absolute
+console.log(Math.abs(c))
+
+let d = 25;
+
+//開根號
+console.log(Math.sqrt(d))
+-----------------------------------------------------------------------------------------
+!!!!!	array陣列	!!!!!	
+沒有長度限制 可以無上限的增加
+JS陣列的裡面可以塞入不同資料形態的東西
+let arr = [ 20, "ver", true, undefined, null, "", [1,2,3], {name:"Allen",type:"mp"},
+{name:"竣", type:"classMate", age:[10,20,30]}]
+
+//會印出所有東西
+console.log(arr)
+
+//印出陣列第八個裡面的age陣列第一項 (從0開始數)		結果為20
+console.log(arr[8].age[1])
+
+let arr = ["Today","is","a","good","day!!!"]
+
+console.log(arr)
+
+//推入,從陣列最後一個元素做增加
+arr.push("Cool")			=>// 在尾端新增了Cool
+console.log(arr)			=>['Today', 'is', 'a', 'good', 'day!!!', 'Cool']
+
+//從陣列最後一個元素做刪減
+arr.pop()				=> // 刪除了最後一個元素 day!!
+
+//顯示刪掉的元素
+console.log(arr.pop())			=>day!!
+console.log(arr)			=>['Today', 'is', 'a', 'good']
+
+//unshift 從陣列最前方增加
+arr.unshift("Hot")			=>// 在最前方新增了Hot
+console.log(arr)			=>['Hot', 'Today', 'is', 'a', 'good']
+
+//shift 從陣列最前方刪減
+arr.shift()				=>// 刪除了最前方的元素 Hot
+console.log(arr)			=>// ['Today', 'is', 'a', 'good']
+
+//從自己想要的地方開始操作
+//splice(要操作的索引位置，從索引位置開始要代替的元素數量，要添加的內容(沒有填就是刪除))
+
+arr.splice(1,1,"are")   		//將第一個位置的元素換成"are"
+console.log(arr)        		//['Today', 'are', 'a', 'good']
+
+arr.splice(1,1)        			//刪除了第一個位置 的一個元素
+console.log(arr)	       		//['Today', 'a', 'good']
+
+arr.splice(1,1,"are","20")     		//將第一個位置的元素換成"are","20"
+console.log(arr)              		//['Today', 'are', '20', 'good']
+
+
+let arr = [81, 82, 83, 84, 85, 86, 87, 88, 89]
+
+//forEach針對陣列進行"便歷" ,(each=每個) 選取每個陣列的元素
+//arr.forEach(function(e){
+
+arr.forEach(e => {
+    console.log(e)			=>會列出每個元素81 82 83.....
+})
+
+//arr.forEach(function(e,index){    	//用來放便歷後每個元素的索引值
+
+arr.forEach((e, index) => {
+    console.log(index)			=>會列出每個索引值0 1 2 3 4.......
+})
+
+// arr.reduce(function){}   		//陣列的累加 加總
+
+let newArr = arr.reduce((total, item) => {
+    console.log(total)      		=>81 81+82 81+82+83......
+    return total + item;
+})
+console.log(newArr)			=>765 //81+~89
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]
+}
+console.log(sum)			=>765
+
+//filter (過濾) 會將我要的元素挑選出來	並產生新陣列	會改變陣列長度
+
+let filterArr = arr.filter(item => {
+    return item > 85;
+})
+					//會將>85的元素回傳 並產生新陣列
+console.log(filterArr)			=>[85,86,87,88,89]
+
+//map(映射) 不會改變陣列長度	會將每個便歷的元素增加判斷式	會對便歷後的元素作動
+
+let mapArr =arr.map(item=>{
+    return item + "可口可樂";		//將便歷的元素後面+可口可樂
+})					
+console.log(mapArr)			=>['81可口可樂', '82可口可樂', 
+'83可口可樂', '84可口可樂', '85可口可樂', '86可口可樂', '87可口可樂', 
+'88可口可樂', '89可口可樂']
+
+REST.API 連接前後端
+
+//ref及時狀態回報
+        let setupMsg = ref('setupMsgg')

@@ -1,0 +1,282 @@
+前後端傳輸     看	1101前端PDF
+
+前端分為
+• HTML
+• 前端網頁的骨架:	不算是程式語言，是屬於樣板語言的一種
+		邏輯能力需求較不高，但非常吃熟練度且語法要多背硬記
+
+• CSS
+• 前端網頁的衣服:	輸出全靠死背!!!
+		HTML結構、CSS相關知識、簡化
+
+• JS(JavaScript)
+• 前端網頁的動作:	算是程式語言，較考驗邏輯能力，熟能生巧且語法與邏輯息
+		息相關，好的邏輯架構會如魚得水
+
+普遍預設網頁入口都是檔名 index 為主
+• 語法編輯概念和樂高相似，利用標籤 (元素) 來堆疊建構
+• 起手式，輸入 “!” + tab/enter 即可生成基本網頁格式與資料
+• Body 內層結構介紹(可自訂義教學)
+
+Z圖層
+z-index: 10; 會比 z-index: 9; 還上方，也就是數字設越大就越上層。z-index 的值越大，代表離我們越靠近；z-index 的值越小，代表離我們較遠。
+
+如果 2 個 div 設的 z-index 數值都一樣，那麼後方的 div 會覆蓋過前方的 div
+===============================================================================
+html:
+名稱通常以.html結尾 甚麼檔案就以.型態做結尾
+先打! 然後直接打tab/enter就可以生成基本的網頁格式與資料
+
+“<>” ：稱標記，“<h1>”：標籤，”</h1>”：結尾標籤；
+ex:<p>xxxdddeee</p>
+會印出xxxdddeee並換行
+
+能被分班級 ( class ) 、擁有識別證 ( id )、不同造型( style )以及擁
+有名字( name )
+class:可以有許多的名稱
+id 只會有一個
+style 可以換造型 改顏色
+name命名
+
+常用標籤
+• h1~h6：預設字體的標籤由大到小，h1最大
+
+<ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+    </ui>
+
+• ul：列表群組(無排序)、
+	ex:	•one  
+		•two  
+		•three
+		.....
+    
+<ol>
+      <li>一</li>
+      <li>二</li>
+      <li>三</li>
+    </ol>
+
+  ol列表群組(有排序) 
+	ex:	1.一
+		2.二
+		3.三 
+		 .......
+
+• 兩者內容皆需放入 li：表示列表里的標籤
+• a：超連結
+• textarea：文字區域
+• div：容器
+• Img：圖片，src代表路徑，alt代表名稱
+• p：文字標籤(會自動換行)
+• span：文字標籤(不自動換行)
+• small：較小的文字標籤(自動換行)
+
+快捷整理鍵為alt + shift + f
+儲存一樣用ctrl + s 然後右下角點go live
+
+在網站上面按右鍵 或是 f12 的話可以查看網站的原始碼	
+
+網頁沒有高度的概念 所以要給他高度
+
+body是網頁裡顯示的東西
+
+-----快捷鍵-----
+alt + 方向鍵 可以移動code
+
+先反白選取區域 按住shift+上下方向鍵 會在底下複製反白區域的Code
+
+按住alt 然後按滑鼠左鍵 可以選取想輸入的位置 一次輸入code
+
+註解跟java一樣是 /+ctrl
+---------------
+<p>會左右填滿會自動換行，如果要換行的話可以打<p></p>
+
+<a href="(這裡輸入超連結)">顯示的文字</a>
+	ex:	<a href="https://www.youtube.com/"> 前往yotube </a>
+或是進到其他的html
+	ex:	<a href="./second.html"> second </a>
+
+回頂端
+<a href="#" ></a>
+img可以在中間放入圖片的網址就可以塞入圖片
+<img src="http://......"alt="">
+
+輸入./之後可以選取當前資料夾的檔案 也可以放入圖片
+<img src="./四個標籤的用法.png"alt="">
+
+texttarea 建立一個可以輸入文字的區域
+<textarea name="aed" id="" cols="30" rows="10"></textarea>
+<div>:容器 可以塞入內容與其他東西相隔
+<div>Hot Div</div>
+
+快速建立標籤
+• 於 HTML 直接輸入 .test(class名稱)，可以建立 class=“test” 的 <div> 標籤
+ex: .abc 按enter之後會直接跑出
+<div class="abc"></div>
+
+範例：.t1+.t2*3+.t4>p^.t5
+• 上述範例說明
+• .t1 表示建立 class = “t1” 的 <div> 標籤			
+• .t2 表示建立三個 t2 的 <div> 標籤			.t2*3 就是乘三
+• .t4>p 表示建立包含 <p> 標籤的 .t4 的 <div> 標籤		在t4裡面建立<P> 因為有在裡面建立其他標籤所以要^
+• ^t5 表示跳脫出 .t4 <div> 標籤並建立 .t5 的 <div> 標籤 	因為^已經跳出div了所以不用打+	
+-----可看下圖-----
+輸入.t1+.t2*3+.t4>p^.t5
+	ex:
+	div class="t1"></div
+   	div class="t2"></div
+    	div class="t2"></div
+    	div class="t2"></div
+    	div class="t4">
+      	p></p>
+    	/div>
+    	div class="t5"></div
+
+$ 為數列 從 1 開始 ++
+
+
+label 表示說明標題
+輸入標籤  input 經常被使用到，因為能輸入的型態  type 相當多元
+以下為別人整理的標籤網站
+https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input	
+
+• Type ：	text(文字)、		輸入文字
+		number(數字)、		輸入數字
+		radio(單選方塊)、	可以選取在相同 name 中選中其中一個
+		checkbox(複選方塊)、	可設為選中或不選中
+		file (選取檔案)、	
+		password (密碼 )
+		color(取色器)
+		
+border 	邊界
+padding 邊界往內推
+margin 	邊界往外推
+
+border-radius 設定成圓角
+
+在link連接後可以使用資料夾裡的其他檔案  .css
+scss為一個方便輸入code的地方，但是無法用link讀取，要下載live sass Complie之後可以在底下找到
+watch sass按鈕，可以將scss的檔案轉換成css檔案，css就可以讀取了
+
+
+互動語法
+&:hover{} 滑鼠碰到後的反應
+&:active{} 點擊後的反應
+transition 互動的反應時間
+
+disaplay:flex 排版
+無display時 主軸為由上置下
+如果有 主軸為左至右 次軸為上至下
+
+justify-content:	//主軸對齊方式
+align-items:		//次軸對齊方式
+
+flex-direction: row; 			//使用預設值
+flex-direction: row-reverse;		//rever會使方向相反
+flex-direction: column;			//主次軸對調	
+flex-direction: column-reverse;		//主次軸對調
+
+justify-content:
+:flex-start	預設值，將元素在主軸的起始位置對齊。
+:flex-end	將元素在主軸的結束位置對齊。
+:center		將元素在主軸上居中對齊。
+:space-between	將元素分散排列在容器內，首尾元素貼著容器的兩側。
+:space-around	將元素分散排列在容器內，元素之間的間隔相等，包括首尾元素到容器邊緣的距離。
+:space-evenly	將元素分散排列在容器內，元素之間的間隔和首尾元素到容器邊緣的距離均相等。
+
+lorem + x  x=數字 隨機生成x組的單字
+
+flex-wrap: wrap;換行 超過區塊的部份會往下一行
+white-space:nowrap; 死不換行
+
+Background - image : 設定背景圖片
+Background - repeat : 背景是否重複    ------以下為repeat的變種
+background - repeat: no-repeat; 背景不會重複
+background - repeat: repeat-x; 在X軸重複
+				  Y軸同理
+background - repeat: space;	在重複的圖片與圖片之間留白
+background - repeat: round;	類似於填滿整個區塊 圖片之間會貼齊
+Background - position :50% 50%;定背景位置 前方數值表示水平 後方數值表示垂直
+
+position: fixed;		//定錨	不論如何縮放網頁與滾輪滑動，該標籤始終固定在網頁顯示
+    bottom: 0;				的某一絕對位置，
+    right: 2%;				定位方式是以視窗的上下左右進行的
+
+Position
+Relative & absolute => 父子關係定錨
+• 與定錨相同會搭配 bottom、top、right、left，不過是在子標籤中使用
+• 使用方式為在父標籤的 css 設定 position:relative
+• 於子標籤的 css 中設定 absolute，即可使子標籤在父標籤的區域中進行定錨
+
+偽元素 (只有畫面 沒有新增元素
+• 如同名稱般，並不是實際新增的元素而是新增於顯示畫面，
+• 有 ::after & ::before 兩個種類
+• 要注意的是，在使用偽元素時必須給予 “content” 這個屬性，CSS
+才能捕捉
+
+font-size: 文字尺寸
+
+vh（Viewport Height）：表示相對於視窗高度的百分比。1vh等於視窗高度的1%。這是相對於整個視窗的尺寸。ex:50vh代表元素的高度是當前視窗高度的50%。
+
+vw（Viewport Width）：表示相對於視窗寬度的百分比。1vw等於視窗寬度的1%。這是相對於整個視窗的寬度。ex:50vw代表元素的寬度是當前視窗寬度的50%。
+
+%（Percentage）：表示相對於父元素的百分比。1%等於父元素尺寸的1%。這是相對於包含元素（父元素）的尺寸。ex:如果父元素的寬度是200px，50%就代表100px。
+
+style > id > class 選擇權限的比較及
+
+word-wrap:break-word 自動換行
+
+text-align: center; 文字置中
+
+以下為div裡文字水平垂直置中
+		display: flex;
+            	justify-content: center;
+            	align-content: center;
+           	 flex-wrap: wrap;
+
+object-fit 的值有：
+
+fill：預設值，會使圖片變形以合適設定的大小。（不推，會變形）
+contain: 保持圖片比例呈現在設定的大小中。		
+cover: 保持圖片比並裁剪至適合的大小中。
+none: 不調整圖片比例。
+scale-down: 等比縮小，和 contain 的效果相似。
+
+placeholder 灰字 提示該欄狀況
+
+width:fill; 填滿至上一個框的尺寸
+
+bootstrap 到網站後 CSS放在head的link之前 JS的放在body裡面
+
+index 		網站起始點
+style sheet 	css後面的ss
+
+value="ddd"將預設輸入值為ddd
+disabled    無法輸入
+
+overflow 設置了元素溢出時的行為 當內容太大會自適應
+
+select 用來建立下拉式選單 (dropdown menu)，讓使用者可以從一堆選項中選擇出一個或多個選項。
+
+select> 本身做為選單的容器，在 select 裡面用 <option> 標籤來建立個別選項。
+
+*{} 在SCSS裡 星號+大括號 意思指的是對全部的物件動作
+
+text-decoration:none;	去掉文字底線
+
+
+設置主軸方向
+flex-direction
+
+row			行 水平 默認值
+column			列
+row-reverse		行 從右到左
+column-reverse		列 從下向上
+
+文字描邊
+-webkit-text-stroke:  ;
+width	描邊厚度
+color	文字的描邊顏色
